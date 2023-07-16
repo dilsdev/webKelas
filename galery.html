@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X RPL II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/galery.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <style>
+        /* Gaya untuk tombol "Previous" */
+        .slick-prev {
+            width: 0;
+            height: 0;
+            position: fixed;
+            z-index: 0;
+        }
+
+        .slick-next {
+            display: flex;
+            width: 4rem;
+            height: 2rem;
+            justify-content: center;
+            align-items: center;
+            background-color: #554f4b;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            border-radius: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="img/logo.png" alt="logo rpl">
+            <h1>X RPL II</h1>
+        </div>
+        <div class="navbar-nav">
+            <a href="index.html">beranda</a>
+            <a href="biodata.html">siswa</a>
+            <a href="#">galery</a>
+            <a href="about-us.html">about us</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"> <i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <div class="conten">
+        <div class="judul">
+            <h1>photos/ <span>Moments</span></h1>
+        </div>
+        <div class="slider">
+            <div><img src="img/momen1.jpg" alt="Gambar 1"></div>
+            <div><img src="img/momen2.jpg" alt="Gambar 2"></div>
+            <div><img src="img/momen3.jpg" alt="Gambar 3"></div>
+            <div><img src="img/momen4.jpg" alt="Gambar 4"></div>
+            <div><img src="img/momen5.jpg" alt="Gambar 5"></div>
+            <div><img src="img/momen6.jpg" alt="Gambar 6"></div>
+        </div>
+        <div class="judul">
+            <h1>photos/ <span>Moments</span></h1>
+        </div>
+        <div class="slider">
+            <div><img src="img/momen7.jpg" alt="Gambar 1"></div>
+            <div><img src="img/momen8.jpg" alt="Gambar 2"></div>
+            <div><img src="img/momen9.jpg" alt="Gambar 3"></div>
+            <div><img src="img/momen10.jpg" alt="Gambar 4"></div>
+            <div><img src="img/momen11.jpg" alt="Gambar 5"></div>
+            <div><img src="img/momen12.jpg" alt="Gambar 6"></div>
+        </div>
+        <div class="judul">
+            <h1>photos/ <span>Moments</span></h1>
+        </div>
+        <div class="slider">
+            <div><img src="img/random1.jpg" alt="Gambar 1"></div>
+            <div><img src="img/random3.jpg" alt="Gambar 3"></div>
+            <div><img src="img/random5.jpg" alt="Gambar 5"></div>
+            <div><img src="img/random6.jpg" alt="Gambar 6"></div>
+            <div><img src="img/random7.jpg" alt="Gambar 6"></div>
+            <div><img src="img/random8.jpg" alt="Gambar 6"></div>
+            <div><img src="img/random9.jpg" alt="Gambar 6"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

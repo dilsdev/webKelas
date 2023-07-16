@@ -1,0 +1,556 @@
+:root {
+    --ungu: #1A2238;
+    --biru: #9DAAF2;
+    --merah: #FF6A3D;
+    --kuning: #F4DB7D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--ungu);
+    color: #fff;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem 5%;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.3);
+    border-bottom: 2px solid var(--merah);
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+
+.navbar .navbar-logo {
+    display: flex;
+}
+
+.navbar .navbar-logo img {
+    aspect-ratio: 1/1;
+    width: 35px;
+    margin-right: 0.8rem;
+}
+
+.navbar .navbar-logo h1 {
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--merah);
+
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--kuning);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar .navbar-extra {
+    display: none;
+}
+
+#hamburger-menu {
+    /* menghilangkan logo menu */
+    display: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+
+}
+
+.hero .content {
+    color: #fff;
+}
+
+.hero .content {
+    padding-left: 5%;
+    max-width: 30rem;
+}
+
+.hero .content h1 {
+    font-size: 5rem;
+    font-style: italic;
+}
+
+.hero .content h1 span {
+    color: var(--merah);
+}
+
+.hero .logodepan {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 50%;
+    height: 40%;
+}
+
+.hero .logodepan img {
+    display: flex;
+    /* padding-right:6rem ; */
+
+    aspect-ratio: 1/1;
+    width: 20rem;
+}
+
+/* students */
+.students {
+    padding: 6rem 5% 4rem;
+}
+
+.students h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.students h2 span {
+    color: var(--merah);
+}
+
+.fotoprofil {
+    aspect-ratio: 1/1;
+    width: 200px;
+    border-radius: 5%;
+}
+
+.walikelas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kotakbiodata {
+    display: block;
+    border: 2px solid var(--kuning);
+    border-radius: 5%;
+    padding: 1rem;
+    margin: 0rem 1rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.kotakbiodata:hover {
+    background-color: #969494;
+    border: 2px solid var(--merah);
+    color: #000000;
+}
+
+
+.kotakbiodata-pengurus {
+    display: block;
+    border: 2px solid var(--kuning);
+    border-radius: 5%;
+    padding: 1rem;
+    margin: 3rem 10rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.kotakbiodata-pengurus:hover {
+    background-color: #969494;
+    border: 2px solid var(--merah);
+    color: #000000;
+}
+
+.kotakbiodata-siswa {
+    display: inline-block;
+    border: 2px solid var(--kuning);
+    border-radius: 5%;
+    padding: 1rem;
+    margin: 3rem 0.5rem 0.5rem;
+}
+
+.kotakbiodata-siswa:hover {
+    background-color: #969494;
+    border: 2px solid var(--merah);
+    color: #000000;
+}
+
+.biodatanama {
+    text-align: center;
+}
+
+.biodatajabatan {
+    text-align: center;
+    font-weight: 100;
+}
+
+.pengurus {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.siswa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    height: auto;
+}
+
+.btn-biodata {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-biodata a {
+    color: #fff;
+    border: 2px solid #F4DB7D;
+    border-radius: 20px;
+    padding: 0.6rem 1rem;
+    margin-top: 1rem;
+}
+
+.btn-biodata a:hover {
+    color: #000000;
+    background-color: #ccbab4;
+}
+
+
+
+
+
+
+/* media queries */
+
+@media(max-width:1366px) {}
+
+@media(max-width:768px) {
+
+    .navbar .navbar-extra {
+        display: inline-block;
+    }
+
+    #hamburger-menu {
+        /* untuk memunculkan logo  */
+        display: inline-block;
+    }
+
+    .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        background-color: rgb(58, 53, 53);
+        height: 100vh;
+    }
+
+    .navbar-extra a {
+        color: #fff;
+    }
+
+    .navbar-nav a {
+        display: inline-block;
+        min-width: 50px;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .navbar .navbar-logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .navbar .navbar-nav a {
+        color: #ffffff;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        content: "";
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--kuning);
+        transform: scaleX(0);
+        transition: 0.2s linear;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(1);
+    }
+
+
+
+
+    .hero .content {
+        padding: 1.4rem 3%;
+        max-width: 25rem;
+    }
+
+    .hero .content h1 {
+        font-size: 4rem;
+    }
+
+    .hero .logodepan {
+        /* display: none; */
+        /* background-image: url(../img/logo.png); */
+        /* no miror */
+        opacity: 0.1;
+        position: fixed;
+        padding-left: 50%;
+    }
+
+    .hero .logodepan img {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    /* students */
+    .students {
+        padding: 4rem 3% 1rem;
+    }
+
+    .students h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+
+    .fotoprofil {
+        aspect-ratio: 1/1;
+        width: 100px;
+        border-radius: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .kotakbiodata {
+        border: 2px solid var(--kuning);
+        border-radius: 5%;
+        padding: 0.5rem;
+        max-width: 22rem;
+
+    }
+
+    .kotakbiodata-siswa {
+        display: inline-block;
+        border: 2px solid var(--kuning);
+        border-radius: 5%;
+        padding: 1rem;
+        margin: 3rem 10px 0.5rem;
+    }
+
+    .biodatanama {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .biodatajabatan {
+        text-align: center;
+        font-weight: 100;
+        font-size: 0.5rem;
+    }
+
+    .btn-biodata a {
+        color: #fff;
+        border: 2px solid #F4DB7D;
+        border-radius: 20px;
+        padding: 0.6rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .btn-biodata a:hover {
+        color: #000000;
+        background-color: #ccbab4;
+    }
+
+
+
+}
+
+@media(max-width:450px) {
+
+
+    .navbar .navbar-extra {
+        display: inline-block;
+    }
+
+    #hamburger-menu {
+        /* untuk memunculkan logo  */
+        display: inline-block;
+    }
+
+    .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        background-color: rgb(58, 53, 53);
+        height: 100vh;
+    }
+
+    .navbar-extra a {
+        color: #fff;
+    }
+
+    .navbar-nav a {
+        display: inline-block;
+        min-width: 50px;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .navbar .navbar-logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .navbar .navbar-nav a {
+        color: #ffffff;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        content: "";
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--kuning);
+        transform: scaleX(0);
+        transition: 0.2s linear;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(1);
+    }
+
+
+
+
+    .hero .content {
+        padding: 1.4rem 3%;
+        max-width: 25rem;
+    }
+
+    .hero .content h1 {
+        font-size: 4rem;
+    }
+
+    .hero .logodepan {
+        /* display: none; */
+        /* background-image: url(../img/logo.png); */
+        /* no miror */
+        opacity: 0.1;
+        position: fixed;
+        padding-left: 50%;
+    }
+
+    .hero .logodepan img {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    /* students */
+    .students {
+        padding: 4rem 3% 1rem;
+    }
+
+    .students h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+
+    .fotoprofil {
+        aspect-ratio: 1/1;
+        width: 100px;
+        border-radius: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .kotakbiodata {
+        border: 2px solid var(--kuning);
+        border-radius: 5%;
+        padding: 0.5rem;
+        max-width: 22rem;
+
+    }
+
+    .kotakbiodata-siswa {
+        display: inline-block;
+        border: 2px solid var(--kuning);
+        border-radius: 5%;
+        padding: 1rem;
+        margin: 3rem 10px 0.5rem;
+    }
+
+    .biodatanama {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .biodatajabatan {
+        text-align: center;
+        font-weight: 100;
+        font-size: 0.5rem;
+    }
+
+    .btn-biodata a {
+        color: #fff;
+        border: 2px solid #F4DB7D;
+        border-radius: 20px;
+        padding: 0.6rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .btn-biodata a:hover {
+        color: #000000;
+        background-color: #ccbab4;
+    }
+}
